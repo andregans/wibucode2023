@@ -360,5 +360,125 @@
       </div>
     </section>
 
+    <!-- FAQ -->
+    <section class="max-w-screen-lg mx-auto mb-32">
+      <div class="flex flex-col justify-center items-center mb-14">
+        <div class="text-tosca font-semibold mb-3 uppercase">Frequently Asked Questions</div>
+        <h2 class="text-navy text-3xl font-semibold">Pertanyaan Yang Sering Di Tanyakan</h2>
+      </div>
+      <div class="grid grid-cols-2 gap-5">
+        <div class="space-y-5">
+          <div x-data="{open: false}" class="bg-soft-gray w-full rounded-xl">
+            <button
+              @click="open = !open"
+              class="flex items-center justify-between py-5 px-8 rounded-xl w-full">
+              <div class="text-sm font-semibold">Apakah wibucode isinya wibu semua?</div>
+              <div class="border-l border-gray">
+                <img
+                  class="transition"
+                  :class="open && 'rotate-180'"
+                  src="./assets/images/icons/arrow-down.svg"
+                  alt="arrow down" />
+              </div>
+            </button>
+            <p x-cloak x-show="open" class="py-5 mx-8 text-dark-purple border-t bordet-gray">
+              Tentu saja tidak semuanya wibu, hanya sebagian saja
+            </p>
+          </div>
+          <div x-data="{open: false}" class="bg-soft-gray w-full rounded-xl">
+            <button
+              @click="open = !open"
+              class="flex items-center justify-between py-5 px-8 rounded-xl w-full">
+              <div class="text-sm font-semibold">Apakah bergabung di wibucode gratis?</div>
+              <div class="border-l border-gray">
+                <img
+                  class="transition"
+                  :class="open && 'rotate-180'"
+                  src="./assets/images/icons/arrow-down.svg"
+                  alt="arrow down" />
+              </div>
+            </button>
+            <p x-cloak x-show="open" class="py-5 mx-8 text-dark-purple border-t bordet-gray">
+              Ya, bergabung di wibucode 100% gratis tanpa di pungut biaya apapun
+            </p>
+          </div>
+          <div x-data="{open: false}" class="bg-soft-gray w-full rounded-xl">
+            <button
+              @click="open = !open"
+              class="flex items-center justify-between py-5 px-8 rounded-xl w-full">
+              <div class="text-sm font-semibold">Siapa saja yang dapat bergabung di wibucode?</div>
+              <div class="border-l border-gray">
+                <img
+                  class="transition"
+                  :class="open && 'rotate-180'"
+                  src="./assets/images/icons/arrow-down.svg"
+                  alt="arrow down" />
+              </div>
+            </button>
+            <p x-cloak x-show="open" class="py-5 mx-8 text-dark-purple border-t bordet-gray">
+              Semua orang dapat bergabung di wibucode tanpa memandang ras,suku,bangsa,agama,title
+              bahkan yang tidak memilik latar belakang IT dapat bergabung
+            </p>
+          </div>
+        </div>
+        <div class="space-y-5">
+          <div x-data="{open: false}" class="bg-soft-gray w-full rounded-xl">
+            <button
+              @click="open = !open"
+              class="flex items-center justify-between py-5 px-8 rounded-xl w-full">
+              <div class="text-sm font-semibold">Bagaimana cara bergabung di wibucode?</div>
+              <div class="border-l border-gray">
+                <img
+                  class="transition"
+                  :class="open && 'rotate-180'"
+                  src="./assets/images/icons/arrow-down.svg"
+                  alt="arrow down" />
+              </div>
+            </button>
+            <p x-cloak x-show="open" class="py-5 mx-8 text-dark-purple border-t bordet-gray">
+              Kamu dapat menekan tombol “Mulai Bergabung” pada halaman beranda situs
+            </p>
+          </div>
+          <div x-data="{open: false}" class="bg-soft-gray w-full rounded-xl">
+            <button
+              @click="open = !open"
+              class="flex items-center justify-between py-5 px-8 rounded-xl w-full">
+              <div class="text-sm font-semibold">Apa benefit nya bergabung di wibucode?</div>
+              <div class="border-l border-gray">
+                <img
+                  class="transition"
+                  :class="open && 'rotate-180'"
+                  src="./assets/images/icons/arrow-down.svg"
+                  alt="arrow down" />
+              </div>
+            </button>
+            <p x-cloak x-show="open" class="py-5 mx-8 text-dark-purple border-t bordet-gray">
+              Banyak benefit yang bisa kamu dapatkan mulai dari mendapatkan teman baru, informasi
+              terbaru sputar IT, Bahkan mungkin bisa mendapatkan pacar : D
+            </p>
+          </div>
+          <div x-data="{open: false}" class="bg-soft-gray w-full rounded-xl">
+            <button
+              @click="open = !open"
+              class="flex items-center justify-between py-5 px-8 rounded-xl w-full">
+              <div class="text-sm font-semibold">Apa yang saya lakukan ketika sudah bergabung?</div>
+              <div class="border-l border-gray">
+                <img
+                  class="transition"
+                  :class="open && 'rotate-180'"
+                  src="./assets/images/icons/arrow-down.svg"
+                  alt="arrow down" />
+              </div>
+            </button>
+            <p x-cloak x-show="open" class="py-5 mx-8 text-dark-purple border-t bordet-gray">
+              Pastikan kamu sudah mengikuti peraturan yang berlaku di komunitas, Setelah itu kamu
+              dapat melakukan apa yang ingin kamu lakukan asalakan tidak melanggar aturan yang
+              berlaku
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </body>
 </html>
