@@ -800,7 +800,178 @@
 
     </div>
 
-    
+    <!-- Popup Semua Testimoni -->
+    <div x-cloak x-show="showPopupSemuaTestimoni" x-transition.opacity.transition.1000ms class="fixed inset-0 bg-black/30 z-50 overflow-auto p-5 sm:p-10 md:p-20">
+      <div class="relative max-w-screen-lg mx-auto md:mt-20 bg-white rounded-xl py-14 pb-5">
+        <button @click="showPopupSemuaTestimoni = false" class="absolute top-3 right-3 p-2 rounded-lg border-2 border-[#E5E5E5] hover:bg-[#E5E5E5] transition">
+          <img src="./assets/images/icons/close-icon.svg" alt="close">
+        </button>
+        <div class="flex flex-col justify-center items-center mt-3 mb-5 md:mb-10">
+          <div class="text-tosca font-semibold mb-3 uppercase">Testimonials</div>
+          <h2 class="text-navy text-2xl md:text-3xl font-semibold">Semua Testimoni</h2>
+        </div>
+        <div class="columns-3 gap-5 py-5 px-10">
+          <div class="bg-soft-gray rounded-xl p-5 break-inside-avoid mb-5">
+            <p class="text-sm">Di Wibucode saya dapat bertemu dengan orang orang hebat</p>
+            <div class="flex items-center gap-x-3 mt-5">
+              <img
+                src="./assets/images/testimonials/andrerio.png"
+                class="w-8 h-8 rounded-full object-cover bg-soft-gray"
+                alt="andre rio" />
+              <div>
+                <h3 class="font-semibold text-sm">Andre Rio</h3>
+                <p class="text-dark-purple text-xs">UI Designer</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-soft-gray rounded-xl p-5 break-inside-avoid mb-5">
+            <p class="text-sm">
+              saya mendapatkan banyak pengetahuan, teman seperjuangan dan keseruan
+            </p>
+            <div class="flex items-center gap-x-3 mt-5">
+              <img
+                src="./assets/images/testimonials/hudadamar.png"
+                class="w-8 h-8 rounded-full object-cover bg-soft-gray"
+                alt="huda damar" />
+              <div>
+                <h3 class="font-semibold text-sm">Huda Damar</h3>
+                <p class="text-dark-purple text-xs">Front-End Developer</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="bg-soft-gray rounded-xl p-5 break-inside-avoid mb-5">
+            <p class="text-sm">
+              Setelah masuk komunitas ini saya bnyak sekali mendapat ilmu baru yang belum.
+              Pernah Ku dapatkan sebelumnya
+            </p>
+            <div class="flex items-center gap-x-3 mt-5">
+              <img
+                src="./assets/images/testimonials/noobles.png"
+                class="w-8 h-8 rounded-full object-cover bg-soft-gray"
+                alt="noobles" />
+              <div>
+                <h3 class="font-semibold text-sm">Noobles</h3>
+                <p class="text-dark-purple text-xs">Mobile App Developer</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-soft-gray rounded-xl p-5 break-inside-avoid mb-5">
+            <p class="text-sm">
+              Setelah masuk komunitas ini saya bnyak sekali mendapat ilmu baru yang belum.
+              Pernah Ku dapatkan sebelumnya
+            </p>
+            <div class="flex items-center gap-x-3 mt-5">
+              <img
+                src="./assets/images/testimonials/zulfikar.png"
+                class="w-8 h-8 rounded-full object-cover bg-soft-gray"
+                alt="zulfikar" />
+              <div>
+                <h3 class="font-semibold text-sm">Zulfikar</h3>
+                <p class="text-dark-purple text-xs">Front-End Developer</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-soft-gray rounded-xl p-5 break-inside-avoid mb-5">
+            <p class="text-sm">
+              Walaupun saya bukan wibu tapi saya senang bergabung disini, saya banyak
+              mendapati teman" baru dan berbagai motivasi yang merubah pandangan hidup saya
+              dari forum wibucode
+            </p>
+            <div class="flex items-center gap-x-3 mt-5">
+              <img
+                src="./assets/images/testimonials/selene.png"
+                class="w-8 h-8 rounded-full object-cover bg-soft-gray"
+                alt="selene" />
+              <div>
+                <h3 class="font-semibold text-sm">Selene Luna</h3>
+                <p class="text-dark-purple text-xs">Back-End Developer</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-soft-gray rounded-xl p-5 break-inside-avoid mb-5">
+            <p class="text-sm">
+              Di wibucode gue banyak dpt ilmu dan teman satu server, and gua bukan wibu
+            </p>
+            <div class="flex items-center gap-x-3 mt-5">
+              <img
+                src="./assets/images/testimonials/ralfa.png"
+                class="w-8 h-8 rounded-full object-cover bg-soft-gray"
+                alt="ralfa" />
+              <div>
+                <h3 class="font-semibold text-sm">Ralfa</h3>
+                <p class="text-dark-purple text-xs">UI/UX Designer</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-soft-gray rounded-xl p-5 break-inside-avoid mb-5">
+            <p class="text-sm">
+              Setelah masuk komunitas ini saya bnyak sekali mendapat ilmu baru yang belum.
+              Pernah Ku dapatkan sebelumnya
+            </p>
+            <div class="flex items-center gap-x-3 mt-5">
+              <img
+                src="./assets/images/testimonials/steven.png"
+                class="w-8 h-8 rounded-full object-cover bg-soft-gray"
+                alt="steven" />
+              <div>
+                <h3 class="font-semibold text-sm">Steven Johannes</h3>
+                <p class="text-dark-purple text-xs">Full Stack Web Developer</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-soft-gray rounded-xl p-5 break-inside-avoid mb-5">
+            <p class="text-sm">
+              Di wibucode saya mendapat ilmu ngewibu dan dapat ilmu tentang programming
+            </p>
+            <div class="flex items-center gap-x-3 mt-5">
+              <img
+                src="./assets/images/testimonials/bayu.png"
+                class="w-8 h-8 rounded-full object-cover bg-soft-gray"
+                alt="bayu" />
+              <div>
+                <h3 class="font-semibold text-sm">Bayu Zikrul</h3>
+                <p class="text-dark-purple text-xs">Front-End Developer</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-soft-gray rounded-xl p-5 break-inside-avoid mb-5">
+            <p class="text-sm">
+              Saya senang di komunitas ini, orang orang nya friendly dan mau membantu satu
+              sama lain
+            </p>
+            <div class="flex items-center gap-x-3 mt-5">
+              <img
+                src="./assets/images/testimonials/abanz.png"
+                class="w-8 h-8 rounded-full object-cover bg-soft-gray"
+                alt="abanz" />
+              <div>
+                <h3 class="font-semibold text-sm">Abanz Levana</h3>
+                <p class="text-dark-purple text-xs">Linux User</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-soft-gray rounded-xl p-5 break-inside-avoid mb-5">
+            <p class="text-sm">
+              Disini saya belajar ilmu pemograman & UI/UX secara santai dan seru. Terkadang
+              juga diselingi dengan kisah inspiratif dari para anggotanya
+            </p>
+            <div class="flex items-center gap-x-3 mt-5">
+              <img
+                src="./assets/images/testimonials/diana.png"
+                class="w-8 h-8 rounded-full object-cover bg-soft-gray"
+                alt="diana" />
+              <div>
+                <h3 class="font-semibold text-sm">Diana EF</h3>
+                <p class="text-dark-purple text-xs">UI/UX Designer</p>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+    </div>
 
 
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
