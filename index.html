@@ -41,7 +41,7 @@
       rel="stylesheet" />
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
   </head>
-  <body class="font-poppins">
+  <body x-data="{showPopupMulaiBergabung: false, showPopupSemuaTestimoni: false}" class="font-poppins">
     <!-- Header -->
     <header x-data="{open: false}" class="fixed inset-x-0 z-40 bg-white">
       <div class="max-w-screen-xl mx-auto py-4 px-5 flex items-center justify-between">
@@ -100,12 +100,12 @@
           <p class="text-dark-purple mt-5 mb-8 md:my-0">
             Bergabung di wibucode kamu akan mendapatkan banyak benefit nya
           </p>
-          <a
-            href="#"
+          <button
+            @click="showPopupMulaiBergabung = true"
             class="flex items-center justify-center gap-x-3 px-6 py-2.5 rounded-xl bg-tosca text-white w-max">
             Mulai Bergabung
             <img src="./assets/images/icons/arrow-right.svg" alt="Mulai Belajar" />
-          </a>
+          </button>
         </div>
         <div class="bg-dark rounded-lg p-6 md:p-8 order-1 md:order-2">
           <div class="flex items-center gap-x-2 pb-3 md:pb-5">
@@ -267,18 +267,18 @@
             </p>
           </div>
           <div class="mt-10 space-y-5">
-            <a
-              href="#"
+            <button
+              @click="showPopupMulaiBergabung = true"
               class="flex items-center justify-center gap-x-3 px-6 py-2.5 rounded-xl bg-tosca text-white w-max">
               Mulai Bergabung
               <img src="./assets/images/icons/arrow-right.svg" alt="Mulai Belajar" />
-            </a>
-            <a
-              href="#"
+            </butt>
+            <button
+              @click="showPopupSemuaTestimoni = true"
               class="flex items-center justify-center gap-x-3 px-6 py-2.5 rounded-xl bg-white text-black w-max">
               Lihat Semua Testimoni
               <img src="./assets/images/icons/arrow-right.svg" class="invert" alt="Mulai Belajar" />
-            </a>
+            </button>
           </div>
         </div>
 
@@ -731,6 +731,77 @@
         </div>
       </div>
     </footer>
+
+    <!-- Popup Mulai Bergabung -->
+    <div x-cloak x-show="showPopupMulaiBergabung" x-transition.opacity.transition.1000ms class="fixed inset-0 bg-black/30 z-50 overflow-auto p-5 sm:p-10 md:p-20">
+      <div class="relative max-w-screen-lg mx-auto md:mt-20 bg-white rounded-xl py-14 pb-5">
+        <button @click="showPopupMulaiBergabung = false" class="absolute top-3 right-3 p-2 rounded-lg border-2 border-[#E5E5E5] hover:bg-[#E5E5E5] transition">
+          <img src="./assets/images/icons/close-icon.svg" alt="close">
+        </button>
+        <div class="flex flex-col justify-center items-center mb-8 md:mb-14">
+          <div class="text-tosca font-semibold mb-3 uppercase">Get Started</div>
+          <h2 class="text-navy text-2xl md:text-3xl font-semibold">Mulai Bergabung</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 p-5">
+          <div
+            class="bg-soft-gray py-7 px-5 flex flex-col items-center justify-center w-full rounded-xl">
+            <div class="p-3">
+              <img src="./assets/images/icons/socials/facebook-lg.svg" alt="facebook" />
+            </div>
+            <h2 class="font-semibold text-navy mt-3 mb-5">Group Facebook</h2>
+            <a
+              href="https://web.facebook.com/wibucode"
+              class="flex items-center justify-center gap-x-3 px-6 py-2.5 rounded-xl text-sm bg-tosca text-white w-max">
+              Mulai Bergabung
+              <img class="h-3.5" src="./assets/images/icons/arrow-right.svg" alt="Mulai Belajar" />
+            </a>
+          </div>
+          <div
+            class="bg-soft-gray py-7 px-5 flex flex-col items-center justify-center w-full rounded-xl">
+            <div class="p-3">
+              <img src="./assets/images/icons/socials/discord-lg.svg" alt="discord" />
+            </div>
+            <h2 class="font-semibold text-navy mt-3 mb-5">Group Discord</h2>
+            <a
+              href="https://discord.com/invite/EFpjWMTU"
+              class="flex items-center justify-center gap-x-3 px-6 py-2.5 rounded-xl text-sm bg-tosca text-white w-max">
+              Mulai Bergabung
+              <img class="h-3.5" src="./assets/images/icons/arrow-right.svg" alt="Mulai Belajar" />
+            </a>
+          </div>
+          <div
+            class="bg-soft-gray py-7 px-5 flex flex-col items-center justify-center w-full rounded-xl">
+            <div class="p-3">
+              <img src="./assets/images/icons/socials/telegram-lg.svg" alt="telegram" />
+            </div>
+            <h2 class="font-semibold text-navy mt-3 mb-5">Group Telegram</h2>
+            <a
+              href="https://t.me/wibucode"
+              class="flex items-center justify-center gap-x-3 px-6 py-2.5 rounded-xl text-sm bg-tosca text-white w-max">
+              Mulai Bergabung
+              <img class="h-3.5" src="./assets/images/icons/arrow-right.svg" alt="Mulai Belajar" />
+            </a>
+          </div>
+          <div
+            class="bg-soft-gray py-7 px-5 flex flex-col items-center justify-center w-full rounded-xl">
+            <div class="p-3">
+              <img src="./assets/images/icons/socials/whatsapp-lg.svg" alt="whatsapp" />
+            </div>
+            <h2 class="font-semibold text-navy mt-3 mb-5">Group Whatsapp</h2>
+            <a
+              href="https://chat.whatsapp.com/DLVUCr4Tr95CfXPhE5CVT5"
+              class="flex items-center justify-center gap-x-3 px-6 py-2.5 rounded-xl text-sm bg-tosca text-white w-max">
+              Mulai Bergabung
+              <img class="h-3.5" src="./assets/images/icons/arrow-right.svg" alt="Mulai Belajar" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    
+
 
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
