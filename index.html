@@ -4,7 +4,35 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary Meta Tags -->
     <title>Wibucode</title>
+    <meta name="title" content="Wibucode" />
+    <meta
+      name="description"
+      content="Bergabung di wibucode kamu akan mendapatkan banyak benefit nya" />
+    <link rel="icon" type="image/x-icon" href="./assets/images/logo.svg" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://wibucode.com/" />
+    <meta property="og:title" content="Wibucode" />
+    <meta
+      property="og:description"
+      content="Bergabung di wibucode kamu akan mendapatkan banyak benefit nya" />
+    <meta property="og:image" content="./assets/images/og_thumbnail.png" />
+    <meta property="og:image:width" content="640" />
+    <meta property="og:image:height" content="360" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://wibucode.com/" />
+    <meta property="twitter:title" content="Wibucode" />
+    <meta
+      property="twitter:description"
+      content="Bergabung di wibucode kamu akan mendapatkan banyak benefit nya" />
+    <meta property="twitter:image" content="" />
+
     <link rel="stylesheet" href="./assets/css/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,26 +43,33 @@
   </head>
   <body class="font-poppins">
     <!-- Header -->
-    <header
-      x-data="{open: false}"
-      class="fixed inset-x-0 z-10 bg-white">
-      <div class="max-w-screen-xl mx-auto py-4 md:py-5 px-5 flex items-center justify-between">
+    <header x-data="{open: false}" class="fixed inset-x-0 z-40 bg-white">
+      <div class="max-w-screen-xl mx-auto py-4 px-5 flex items-center justify-between">
         <div class="relative z-10 flex items-center gap-x-3">
           <img src="./assets/images/logo.svg" alt="wibucode" />
           <span class="text-lg font-medium text-nav">Wibucode</span>
         </div>
-  
+
         <div
-          class="absolute top-[71px] inset-x-0 md:static flex flex-col md:flex-row md:items-center justify-center gap-3 md:gap-12 text-sm bg-soft-gray md:bg-transparent transition-all duration-300"
-          :class="open ? 'top-full' : '-top-[600%]'"
+          class="absolute top-[71px] inset-x-0 md:static flex flex-col md:flex-row md:items-center justify-center gap-3 text-sm bg-soft-gray md:bg-transparent transition-all duration-300"
+          :class="open ? 'top-full' : '-top-[600%]'">
+          <a href="#beranda" class="bg-white md:bg-transparent hover:text-tosca p-5 rounded-lg"
+            >Beranda</a
           >
-          <a href="#beranda" class="bg-white md:bg-transparent hover:text-tosca p-5 rounded-lg">Beranda</a>
-          <a href="#tentang-kami" class="bg-white md:bg-transparent hover:text-tosca p-5 rounded-lg">Tentang Kami</a>
-          <a href="#role-komunitas" class="bg-white md:bg-transparent hover:text-tosca p-5 rounded-lg">Role Komunitas</a>
-          <a href="#testimonial" class="bg-white md:bg-transparent hover:text-tosca p-5 rounded-lg">Apa Kata Meraka</a>
+          <a href="#tentang-kami" class="bg-white md:bg-transparent hover:text-tosca p-5 rounded-lg"
+            >Tentang Kami</a
+          >
+          <a
+            href="#role-komunitas"
+            class="bg-white md:bg-transparent hover:text-tosca p-5 rounded-lg"
+            >Role Komunitas</a
+          >
+          <a href="#testimonial" class="bg-white md:bg-transparent hover:text-tosca p-5 rounded-lg"
+            >Apa Kata Meraka</a
+          >
           <a href="#faq" class="bg-white md:bg-transparent hover:text-tosca p-5 rounded-lg">FAQ</a>
         </div>
-  
+
         <div class="relative z-10 flex items-center gap-3">
           <a
             href="https://github.com/wibucode"
@@ -51,12 +86,16 @@
 
     <main class="max-w-screen-lg mx-auto pt-28 pb-16 md:py-32 px-5">
       <!-- Beranda -->
-      <section id="beranda" class="grid grid-cols-1 md:grid-cols-2 h-full items-start justify-between gap-8 md:gap-10">
+      <section
+        id="beranda"
+        class="grid grid-cols-1 md:grid-cols-2 h-full items-start justify-between gap-8 md:gap-10">
         <div class="flex flex-col justify-between h-full max-w-[450px] order-2 md:order-1">
-          <span class="text-tosca font-semibold uppercase text-sm md:text-base"> NO CODE NO LIFE </span>
+          <span class="text-tosca font-semibold uppercase text-sm md:text-base">
+            NO CODE NO LIFE
+          </span>
           <div class="text-4xl md:text-5xl font-semibold mb-3 mt-6 md:mt-0">
             <h1 class="mb-3 md:mb-5">Wibucode:</h1>
-            <div class="text-tosca">Programming_</div>
+            <span id="typed" class="text-tosca"></span>
           </div>
           <p class="text-dark-purple mt-5 mb-8 md:my-0">
             Bergabung di wibucode kamu akan mendapatkan banyak benefit nya
@@ -115,8 +154,9 @@
       </section>
 
       <!-- Collab -->
-      <section  class="overflow-hidden -mx-5">
-        <div class="flex items-center justify-start md:justify-center gap-x-20 md:gap-x-28 pl-5 pr-10 md:pr-0 py-16 md:py-32 animate-movex md:animate-none">
+      <section class="overflow-hidden -mx-5">
+        <div
+          class="flex items-center justify-start md:justify-center gap-x-20 md:gap-x-28 pl-5 pr-10 md:pr-0 py-16 md:py-32 animate-movex md:animate-none">
           <img src="./assets/images/partnership/peddium.svg" alt="peddium" />
           <img src="./assets/images/partnership/google-dev.svg" alt="google dev" />
           <img src="./assets/images/partnership/wibucode-dev.svg" alt="wibucode dev" />
@@ -130,22 +170,27 @@
           <h2 class="text-navy text-3xl font-semibold">Tentang Kami</h2>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20">
-          <div class="flex item-center justify-center flex-col bg-soft-gray md:rounded-lg px-5 md:px-16 py-10 space-y-5 -mx-5 overflow-hidden">
-            <div class="flex justify-center gap-5 animate-movex-sm [@media(min-width:_400px)]:animate-none">
+          <div
+            class="flex item-center justify-center flex-col bg-soft-gray md:rounded-lg px-5 md:px-16 py-10 space-y-5 -mx-5 overflow-hidden">
+            <div
+              class="flex justify-center gap-5 animate-movex-sm [@media(min-width:_400px)]:animate-none">
               <img src="./assets/images/stacks/icon-figma.svg" alt="figma" />
               <img src="./assets/images/stacks/icon-vscode.svg" alt="vscode" />
               <img src="./assets/images/stacks/icon-html.svg" alt="html" />
               <img src="./assets/images/stacks/icon-css.svg" alt="css" />
               <img src="./assets/images/stacks/icon-javascript.svg" alt="javascript" />
             </div>
-            <div class="flex justify-center gap-5 animate-movex-sm [@media(min-width:_400px)]:animate-none" style="animation-direction: alternate-reverse; ">
+            <div
+              class="flex justify-center gap-5 animate-movex-sm [@media(min-width:_400px)]:animate-none"
+              style="animation-direction: alternate-reverse">
               <img src="./assets/images/stacks/icon-bootstrap.svg" alt="bootstrap" />
               <img src="./assets/images/stacks/icon-tailwindcss.svg" alt="tailwindcss" />
               <img src="./assets/images/stacks/icon-laravel.svg" alt="laravel" />
               <img src="./assets/images/stacks/icon-nodejs.svg" alt="nodejs" />
               <img src="./assets/images/stacks/icon-php.svg" alt="php" />
             </div>
-            <div class="flex justify-center gap-5 animate-movex-sm [@media(min-width:_400px)]:animate-none">
+            <div
+              class="flex justify-center gap-5 animate-movex-sm [@media(min-width:_400px)]:animate-none">
               <img src="./assets/images/stacks/icon-python.svg" alt="python" />
               <img src="./assets/images/stacks/icon-flutter.svg" alt="flutter" />
               <img src="./assets/images/stacks/icon-cpp.svg" alt="cpp" />
@@ -238,16 +283,20 @@
         </div>
 
         <!-- testimonials -->
-        <div class="relative text-black  overflow-hidden h-[250px] md:h-[650px]">
+        <div class="relative text-black overflow-hidden h-[250px] md:h-[650px]">
           <div class="absolute -top-2 inset-x-0 scale-110 h-5 blur-[5px] bg-dark z-10"></div>
           <div class="absolute -bottom-2 inset-x-0 scale-110 h-5 blur bg-dark z-10"></div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-5 animate-movey-lg md:animate-none">
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-5 animate-movey-lg md:animate-none">
             <div class="h-full">
               <div class="animate-none md:animate-movey pt-8">
                 <div class="bg-white rounded-xl p-5 mb-5">
                   <p class="text-sm">Di Wibucode saya dapat bertemu dengan orang orang hebat</p>
                   <div class="flex items-center gap-x-3 mt-5">
-                    <img src="" class="w-8 h-8 rounded-full object-cover bg-soft-gray" alt="" />
+                    <img
+                      src="./assets/images/testimonials/andrerio.png"
+                      class="w-8 h-8 rounded-full object-cover bg-soft-gray"
+                      alt="andre rio" />
                     <div>
                       <h3 class="font-semibold text-sm">Andre Rio</h3>
                       <p class="text-dark-purple text-xs">UI Designer</p>
@@ -259,7 +308,10 @@
                     saya mendapatkan banyak pengetahuan, teman seperjuangan dan keseruan
                   </p>
                   <div class="flex items-center gap-x-3 mt-5">
-                    <img src="" class="w-8 h-8 rounded-full object-cover bg-soft-gray" alt="" />
+                    <img
+                      src="./assets/images/testimonials/hudadamar.png"
+                      class="w-8 h-8 rounded-full object-cover bg-soft-gray"
+                      alt="huda damar" />
                     <div>
                       <h3 class="font-semibold text-sm">Huda Damar</h3>
                       <p class="text-dark-purple text-xs">Front-End Developer</p>
@@ -268,12 +320,15 @@
                 </div>
                 <div class="bg-white rounded-xl p-5 mb-5">
                   <p class="text-sm">
-                    Walaupun saya bukan wibu tapi saya senang bergabung disini, saya banyak mendapati
-                    teman" baru dan berbagai motivasi yang merubah pandangan hidup saya dari forum
-                    wibucode
+                    Walaupun saya bukan wibu tapi saya senang bergabung disini, saya banyak
+                    mendapati teman" baru dan berbagai motivasi yang merubah pandangan hidup saya
+                    dari forum wibucode
                   </p>
                   <div class="flex items-center gap-x-3 mt-5">
-                    <img src="" class="w-8 h-8 rounded-full object-cover bg-soft-gray" alt="" />
+                    <img
+                      src="./assets/images/testimonials/selene.png"
+                      class="w-8 h-8 rounded-full object-cover bg-soft-gray"
+                      alt="selene" />
                     <div>
                       <h3 class="font-semibold text-sm">Selene Luna</h3>
                       <p class="text-dark-purple text-xs">Back-End Developer</p>
@@ -282,11 +337,14 @@
                 </div>
                 <div class="bg-white rounded-xl p-5 mb-5">
                   <p class="text-sm">
-                    Setelah masuk komunitas ini saya bnyak sekali mendapat ilmu baru yang belum. Pernah
-                    Ku dapatkan sebelumnya
+                    Setelah masuk komunitas ini saya bnyak sekali mendapat ilmu baru yang belum.
+                    Pernah Ku dapatkan sebelumnya
                   </p>
                   <div class="flex items-center gap-x-3 mt-5">
-                    <img src="" class="w-8 h-8 rounded-full object-cover bg-soft-gray" alt="" />
+                    <img
+                      src="./assets/images/testimonials/noobles.png"
+                      class="w-8 h-8 rounded-full object-cover bg-soft-gray"
+                      alt="noobles" />
                     <div>
                       <h3 class="font-semibold text-sm">Noobles</h3>
                       <p class="text-dark-purple text-xs">Mobile App Developer</p>
@@ -295,11 +353,14 @@
                 </div>
                 <div class="bg-white rounded-xl p-5 mb-5">
                   <p class="text-sm">
-                    Setelah masuk komunitas ini saya bnyak sekali mendapat ilmu baru yang belum. Pernah
-                    Ku dapatkan sebelumnya
+                    Setelah masuk komunitas ini saya bnyak sekali mendapat ilmu baru yang belum.
+                    Pernah Ku dapatkan sebelumnya
                   </p>
                   <div class="flex items-center gap-x-3 mt-5">
-                    <img src="" class="w-8 h-8 rounded-full object-cover bg-soft-gray" alt="" />
+                    <img
+                      src="./assets/images/testimonials/zulfikar.png"
+                      class="w-8 h-8 rounded-full object-cover bg-soft-gray"
+                      alt="zulfikar" />
                     <div>
                       <h3 class="font-semibold text-sm">Zulfikar</h3>
                       <p class="text-dark-purple text-xs">Front-End Developer</p>
@@ -309,13 +370,18 @@
               </div>
             </div>
             <div class="h-full">
-              <div class="animation-none md:animate-movey pt-0 md:pt-8" style="animation-direction: alternate-reverse;">
+              <div
+                class="animation-none md:animate-movey pt-0 md:pt-8"
+                style="animation-direction: alternate-reverse">
                 <div class="bg-white rounded-xl p-5 mb-5">
                   <p class="text-sm">
                     Di wibucode gue banyak dpt ilmu dan teman satu server, and gua bukan wibu
                   </p>
                   <div class="flex items-center gap-x-3 mt-5">
-                    <img src="" class="w-8 h-8 rounded-full object-cover bg-soft-gray" alt="" />
+                    <img
+                      src="./assets/images/testimonials/ralfa.png"
+                      class="w-8 h-8 rounded-full object-cover bg-soft-gray"
+                      alt="ralfa" />
                     <div>
                       <h3 class="font-semibold text-sm">Ralfa</h3>
                       <p class="text-dark-purple text-xs">UI/UX Designer</p>
@@ -324,11 +390,14 @@
                 </div>
                 <div class="bg-white rounded-xl p-5 mb-5">
                   <p class="text-sm">
-                    Setelah masuk komunitas ini saya bnyak sekali mendapat ilmu baru yang belum. Pernah
-                    Ku dapatkan sebelumnya
+                    Setelah masuk komunitas ini saya bnyak sekali mendapat ilmu baru yang belum.
+                    Pernah Ku dapatkan sebelumnya
                   </p>
                   <div class="flex items-center gap-x-3 mt-5">
-                    <img src="" class="w-8 h-8 rounded-full object-cover bg-soft-gray" alt="" />
+                    <img
+                      src="./assets/images/testimonials/steven.png"
+                      class="w-8 h-8 rounded-full object-cover bg-soft-gray"
+                      alt="steven" />
                     <div>
                       <h3 class="font-semibold text-sm">Steven Johannes</h3>
                       <p class="text-dark-purple text-xs">Full Stack Web Developer</p>
@@ -340,7 +409,10 @@
                     Di wibucode saya mendapat ilmu ngewibu dan dapat ilmu tentang programming
                   </p>
                   <div class="flex items-center gap-x-3 mt-5">
-                    <img src="" class="w-8 h-8 rounded-full object-cover bg-soft-gray" alt="" />
+                    <img
+                      src="./assets/images/testimonials/bayu.png"
+                      class="w-8 h-8 rounded-full object-cover bg-soft-gray"
+                      alt="bayu" />
                     <div>
                       <h3 class="font-semibold text-sm">Bayu Zikrul</h3>
                       <p class="text-dark-purple text-xs">Front-End Developer</p>
@@ -349,11 +421,14 @@
                 </div>
                 <div class="bg-white rounded-xl p-5 mb-5">
                   <p class="text-sm">
-                    Saya senang di komunitas ini, orang orang nya friendly dan mau membantu satu sama
-                    lain
+                    Saya senang di komunitas ini, orang orang nya friendly dan mau membantu satu
+                    sama lain
                   </p>
                   <div class="flex items-center gap-x-3 mt-5">
-                    <img src="" class="w-8 h-8 rounded-full object-cover bg-soft-gray" alt="" />
+                    <img
+                      src="./assets/images/testimonials/abanz.png"
+                      class="w-8 h-8 rounded-full object-cover bg-soft-gray"
+                      alt="abanz" />
                     <div>
                       <h3 class="font-semibold text-sm">Abanz Levana</h3>
                       <p class="text-dark-purple text-xs">Linux User</p>
@@ -362,11 +437,14 @@
                 </div>
                 <div class="bg-white rounded-xl p-5 mb-5">
                   <p class="text-sm">
-                    Disini saya belajar ilmu pemograman & UI/UX secara santai dan seru. Terkadang juga
-                    diselingi dengan kisah inspiratif dari para anggotanya
+                    Disini saya belajar ilmu pemograman & UI/UX secara santai dan seru. Terkadang
+                    juga diselingi dengan kisah inspiratif dari para anggotanya
                   </p>
                   <div class="flex items-center gap-x-3 mt-5">
-                    <img src="" class="w-8 h-8 rounded-full object-cover bg-soft-gray" alt="" />
+                    <img
+                      src="./assets/images/testimonials/diana.png"
+                      class="w-8 h-8 rounded-full object-cover bg-soft-gray"
+                      alt="diana" />
                     <div>
                       <h3 class="font-semibold text-sm">Diana EF</h3>
                       <p class="text-dark-purple text-xs">UI/UX Designer</p>
@@ -392,109 +470,155 @@
             <button
               @click="open = !open"
               class="flex items-center justify-between py-5 px-5 md:px-8 rounded-xl w-full text-left">
-              <div class="text-xs md:text-sm font-semibold pr-3">Apakah wibucode isinya wibu semua?</div>
+              <div class="text-xs md:text-sm font-semibold pr-3">
+                Apakah wibucode isinya wibu semua?
+              </div>
               <div class="border-l border-gray">
                 <img
-                  class="transition"
+                  class="transition duration-500"
                   :class="open && 'rotate-180'"
                   src="./assets/images/icons/arrow-down.svg"
                   alt="arrow down" />
               </div>
             </button>
-            <p x-cloak x-show="open" class="py-5 mx-5 md:mx-8 text-dark-purple border-t bordet-gray text-sm md:text-base">
-              Tentu saja tidak semuanya wibu, hanya sebagian saja
-            </p>
+            <div
+              class="transition-all duration-500 overflow-hidden max-h-0"
+              :style="`max-height: ${open ? $el.querySelector('.describe').offsetHeight+'px' : '0px'}`;">
+              <p
+                class="describe py-5 mx-5 md:mx-8 text-dark-purple border-t bordet-gray text-sm md:text-base">
+                Tentu saja tidak semuanya wibu, hanya sebagian saja
+              </p>
+            </div>
           </div>
           <div x-data="{open: false}" class="bg-soft-gray w-full rounded-xl">
             <button
               @click="open = !open"
               class="flex items-center justify-between py-5 px-5 md:px-8 rounded-xl w-full text-left">
-              <div class="text-xs md:text-sm font-semibold pr-3">Apakah bergabung di wibucode gratis?</div>
+              <div class="text-xs md:text-sm font-semibold pr-3">
+                Apakah bergabung di wibucode gratis?
+              </div>
               <div class="border-l border-gray">
                 <img
-                  class="transition"
+                  class="transition duration-500"
                   :class="open && 'rotate-180'"
                   src="./assets/images/icons/arrow-down.svg"
                   alt="arrow down" />
               </div>
             </button>
-            <p x-cloak x-show="open" class="py-5 mx-5 md:mx-8 text-dark-purple border-t bordet-gray text-sm md:text-base">
-              Ya, bergabung di wibucode 100% gratis tanpa di pungut biaya apapun
-            </p>
+            <div
+              class="transition-all duration-500 overflow-hidden max-h-0"
+              :style="`max-height: ${open ? $el.querySelector('.describe').offsetHeight+'px' : '0px'}`;">
+              <p
+                class="describe py-5 mx-5 md:mx-8 text-dark-purple border-t bordet-gray text-sm md:text-base">
+                Ya, bergabung di wibucode 100% gratis tanpa di pungut biaya apapun
+              </p>
+            </div>
           </div>
           <div x-data="{open: false}" class="bg-soft-gray w-full rounded-xl">
             <button
               @click="open = !open"
               class="flex items-center justify-between py-5 px-5 md:px-8 rounded-xl w-full text-left">
-              <div class="text-xs md:text-sm font-semibold pr-3">Siapa saja yang dapat bergabung di wibucode?</div>
+              <div class="text-xs md:text-sm font-semibold pr-3">
+                Siapa saja yang dapat bergabung di wibucode?
+              </div>
               <div class="border-l border-gray">
                 <img
-                  class="transition"
+                  class="transition duration-500"
                   :class="open && 'rotate-180'"
                   src="./assets/images/icons/arrow-down.svg"
                   alt="arrow down" />
               </div>
             </button>
-            <p x-cloak x-show="open" class="py-5 mx-5 md:mx-8 text-dark-purple border-t bordet-gray text-sm md:text-base">
-              Semua orang dapat bergabung di wibucode tanpa memandang ras,suku,bangsa,agama,title
-              bahkan yang tidak memilik latar belakang IT dapat bergabung
-            </p>
+            <div
+              class="transition-all duration-500 overflow-hidden max-h-0"
+              :style="`max-height: ${open ? $el.querySelector('.describe').offsetHeight+'px' : '0px'}`;">
+              <p
+                class="describe py-5 mx-5 md:mx-8 text-dark-purple border-t bordet-gray text-sm md:text-base">
+                Semua orang dapat bergabung di wibucode tanpa memandang ras,suku,bangsa,agama,title
+                bahkan yang tidak memilik latar belakang IT dapat bergabung
+              </p>
+            </div>
           </div>
         </div>
-        <div class="space-y-5 hidden">
+        <div class="space-y-5">
           <div x-data="{open: false}" class="bg-soft-gray w-full rounded-xl">
             <button
               @click="open = !open"
               class="flex items-center justify-between py-5 px-5 md:px-8 rounded-xl w-full text-left">
-              <div class="text-xs md:text-sm font-semibold pr-3">Bagaimana cara bergabung di wibucode?</div>
+              <div class="text-xs md:text-sm font-semibold pr-3">
+                Bagaimana cara bergabung di wibucode?
+              </div>
               <div class="border-l border-gray">
                 <img
-                  class="transition"
+                  class="transition duration-500"
                   :class="open && 'rotate-180'"
                   src="./assets/images/icons/arrow-down.svg"
                   alt="arrow down" />
               </div>
             </button>
-            <p x-cloak x-show="open" class="py-5 mx-5 md:mx-8 text-dark-purple border-t bordet-gray text-sm md:text-base">
-              Kamu dapat menekan tombol “Mulai Bergabung” pada halaman beranda situs
-            </p>
+            <div
+              class="transition-all duration-500 overflow-hidden max-h-0"
+              :style="`max-height: ${open ? $el.querySelector('.describe').offsetHeight+'px' : '0px'}`;">
+              <div
+                class="transition-all duration-500 overflow-hidden max-h-0"
+                :style="`max-height: ${open ? $el.querySelector('.describe').offsetHeight+'px' : '0px'}`;">
+                <p
+                  class="describe py-5 mx-5 md:mx-8 text-dark-purple border-t bordet-gray text-sm md:text-base">
+                  Kamu dapat menekan tombol “Mulai Bergabung” pada halaman beranda situs
+                </p>
+              </div>
+            </div>
           </div>
           <div x-data="{open: false}" class="bg-soft-gray w-full rounded-xl">
             <button
               @click="open = !open"
               class="flex items-center justify-between py-5 px-5 md:px-8 rounded-xl w-full text-left">
-              <div class="text-xs md:text-sm font-semibold pr-3">Apa benefit nya bergabung di wibucode?</div>
+              <div class="text-xs md:text-sm font-semibold pr-3">
+                Apa benefit nya bergabung di wibucode?
+              </div>
               <div class="border-l border-gray">
                 <img
-                  class="transition"
+                  class="transition duration-500"
                   :class="open && 'rotate-180'"
                   src="./assets/images/icons/arrow-down.svg"
                   alt="arrow down" />
               </div>
             </button>
-            <p x-cloak x-show="open" class="py-5 mx-5 md:mx-8 text-dark-purple border-t bordet-gray text-sm md:text-base">
-              Banyak benefit yang bisa kamu dapatkan mulai dari mendapatkan teman baru, informasi
-              terbaru sputar IT, Bahkan mungkin bisa mendapatkan pacar : D
-            </p>
+            <div
+              class="transition-all duration-500 overflow-hidden max-h-0"
+              :style="`max-height: ${open ? $el.querySelector('.describe').offsetHeight+'px' : '0px'}`;">
+              <p
+                class="describe py-5 mx-5 md:mx-8 text-dark-purple border-t bordet-gray text-sm md:text-base">
+                Banyak benefit yang bisa kamu dapatkan mulai dari mendapatkan teman baru, informasi
+                terbaru sputar IT, Bahkan mungkin bisa mendapatkan pacar : D
+              </p>
+            </div>
           </div>
           <div x-data="{open: false}" class="bg-soft-gray w-full rounded-xl">
             <button
               @click="open = !open"
               class="flex items-center justify-between py-5 px-5 md:px-8 rounded-xl w-full text-left">
-              <div class="text-xs md:text-sm font-semibold pr-3">Apa yang saya lakukan ketika sudah bergabung?</div>
+              <div class="text-xs md:text-sm font-semibold pr-3">
+                Apa yang saya lakukan ketika sudah bergabung?
+              </div>
               <div class="border-l border-gray">
                 <img
-                  class="transition"
+                  class="transition duration-500"
                   :class="open && 'rotate-180'"
                   src="./assets/images/icons/arrow-down.svg"
                   alt="arrow down" />
               </div>
             </button>
-            <p x-cloak x-show="open" class="py-5 mx-5 md:mx-8 text-dark-purple border-t bordet-gray text-sm md:text-base">
-              Pastikan kamu sudah mengikuti peraturan yang berlaku di komunitas, Setelah itu kamu
-              dapat melakukan apa yang ingin kamu lakukan asalakan tidak melanggar aturan yang
-              berlaku
-            </p>
+            <div
+              class="transition-all duration-500 overflow-hidden max-h-0"
+              :style="`max-height: ${open ? $el.querySelector('.describe').offsetHeight+'px' : '0px'}`;">
+              <p
+                class="describe py-5 mx-5 md:mx-8 text-dark-purple border-t bordet-gray text-sm md:text-base">
+                Pastikan kamu sudah mengikuti peraturan yang berlaku di komunitas, Setelah itu kamu
+                dapat melakukan apa yang ingin kamu lakukan asalakan tidak melanggar aturan yang
+                berlaku
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -539,7 +663,10 @@
                   alt="telegram" />
               </a>
               <a href="https://github.com/wibucode02">
-                <img class="w-6 h-6 opacity-80" src="./assets/images/icons/socials/github.svg" alt="github" />
+                <img
+                  class="w-6 h-6 opacity-80"
+                  src="./assets/images/icons/socials/github.svg"
+                  alt="github" />
               </a>
             </div>
           </div>
@@ -560,7 +687,10 @@
                 target="_blank"
                 >Discord</a
               >
-              <a href="https://t.me/wibucode" class="block hover:underline text-sm md:text-base" target="_blank"
+              <a
+                href="https://t.me/wibucode"
+                class="block hover:underline text-sm md:text-base"
+                target="_blank"
                 >Telegram</a
               >
               <a
@@ -574,7 +704,10 @@
           <div>
             <h2 class="text-base md:text-lg font-semibold mb-3">Partner</h2>
             <div class="space-y-2">
-              <a href="https://peddium.com" class="block hover:underline text-sm md:text-base" target="_blank"
+              <a
+                href="https://peddium.com"
+                class="block hover:underline text-sm md:text-base"
+                target="_blank"
                 >Peddium</a
               >
               <a
@@ -583,15 +716,35 @@
                 target="_blank"
                 >GSC ID</a
               >
-              <a href="https://wibucode.dev" class="block hover:underline text-sm md:text-base" target="_blank"
+              <a
+                href="https://wibucode.dev"
+                class="block hover:underline text-sm md:text-base"
+                target="_blank"
                 >Wibucode Dev</a
               >
-              <a href="#" class="block hover:underline text-sm md:text-base" target="_blank">Loker IT</a>
+              <a href="#" class="block hover:underline text-sm md:text-base" target="_blank"
+                >Loker IT</a
+              >
             </div>
           </div>
           <div class="flex items-end">© 2022 Wibucode</div>
         </div>
       </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+      var options = {
+        strings: ['Programming', 'UI/UX Design', 'Linux'],
+        typeSpeed: 60,
+        backSpeed: 20,
+        smartBackspace: true,
+        backDelay: 2000,
+        cursorChar: '_',
+        loop: true,
+      };
+
+      var typed = new Typed('#typed', options);
+    </script>
   </body>
 </html>
