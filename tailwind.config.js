@@ -7,7 +7,8 @@ module.exports = {
     extend: {
       colors: {
         soft: {
-          gray: '#F6F8FD'
+          gray: '#F6F8FD',
+          tosca: '#5AA4B0'
         },
         dark: {
           DEFAULT: '#191919',
