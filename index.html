@@ -90,6 +90,20 @@
             class="bg-white md:bg-transparent hover:text-tosca p-5 rounded-lg"
             >FAQ</a
           >
+          <div x-data="{open: false}" class="relative">
+            <button @click="open = true" class="flex items-center justify-between gap-5 p-5 hover:text-tosca">
+              Lainnnya
+              <img
+                class="transition duration-200"
+                :class="open && 'rotate-180'"
+                src="./assets/images/icons/arrow-down.svg"
+                alt="arrow down" />
+            </button>
+            <div x-show="open" @click.outside="open = false" class="absolute top-full left-1/2 -translate-x-1/2 flex flex-col bg-soft-gray rounded-lg overflow-hidden min-w-[10rem] shadow transition-all">
+              <a href="/blog" class="px-6 py-3 hover:text-tosca transition">Blog</a>
+              <a href="#twibbon" class="px-6 py-3 hover:text-tosca transition">Twibbon</a>
+            </div>
+          </div>
         </div>
 
         <div class="relative z-10 flex items-center gap-3">
@@ -635,15 +649,15 @@
       </div>
     </section>
 
-    <section x-data="{slide: 1}" class="bg-soft-tosca mb-16 md:mb-32 px-5 lg:px-0 py-10">
-      <div class="max-w-screen-xl mx-auto lg:grid grid-cols-2 gap-7">
+    <section x-data="{slide: 1}" id="twibbon" class="bg-soft-tosca lg:px-0 py-14">
+      <div class="max-w-screen-xl mx-auto lg:grid grid-cols-2 gap-7 px-5 xl:px-0">
         <div>
           <div
             x-show="slide == 1"
             x-data="{isFirst: true}"
             class="relative bg-soft-gray grid grid-cols-1 md:grid-cols-2 items-center justify-center gap-x-7 px-8 pb-8 pt-10 md:pt-16 rounded-lg">
             <div
-              class="absolute -top-3 left-1/2 md:left-7 -translate-x-1/2 md:translate-x-0 bg-white rounded-lg px-4 md:px-6 py-2 md:py-3 font-semibold text-xs md:text-base whitespace-nowrap">
+              class="absolute -top-3 left-1/2 md:left-7 -translate-x-1/2 md:translate-x-0 bg-white rounded-lg px-4 md:px-6 py-2 md:py-3 font-semibold text-sm md:text-base whitespace-nowrap">
               Wibucode Frame
             </div>
             <img
@@ -665,7 +679,7 @@
             x-data="{isFirst: true}"
             class="relative bg-soft-gray grid grid-cols-1 md:grid-cols-2 items-center justify-center gap-x-7 px-8 pb-8 pt-10 md:pt-16 rounded-lg">
             <div
-              class="absolute -top-3 left-1/2 md:left-7 -translate-x-1/2 md:translate-x-0 bg-white rounded-lg px-4 md:px-6 py-2 md:py-3 font-semibold text-xs md:text-base whitespace-nowrap">
+              class="absolute -top-3 left-1/2 md:left-7 -translate-x-1/2 md:translate-x-0 bg-white rounded-lg px-4 md:px-6 py-2 md:py-3 font-semibold text-sm md:text-base whitespace-nowrap">
               Wibucode Katakana
             </div>
             <img
@@ -682,7 +696,9 @@
               alt="" />
           </div>
           <div class="mt-5 flex justify-between md:justify-start items-center gap-x-2">
-            <p class="text-white/80 text-xs w-1/2">klik gambar diatas untuk lihat preview</p>
+            <p class="text-white/80 text-xs w-1/2 md:hidden">
+              klik gambar diatas untuk lihat preview
+            </p>
             <div class="flex justify-end md:justify-start items-center gap-x-2">
               <button
                 @click="slide = 1"
@@ -697,7 +713,7 @@
             </div>
           </div>
         </div>
-        <div class="text-soft-gray mt-10 md:mt-0">
+        <div class="text-soft-gray mt-10 md:mt-0 justify-self-end">
           <div class="uppercase font-semibold mb-3">twibbon</div>
           <h2 class="text-3xl font-semibold leading-normal mb-3 w-full md:w-1/2">
             Gunakan twibbon wibucode!
@@ -769,7 +785,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-soft-gray mt-12 pb-12 text-primary-gray px-5 xl:px-0">
+    <footer class="bg-soft-gray pb-12 text-primary-gray px-5 xl:px-0">
       <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row gap-10 md:gap-32 py-10">
         <div class="mb-2 space-y-3">
           <div class="flex items-center gap-5">
